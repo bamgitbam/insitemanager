@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#071323" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
   <meta name="description" content="InsiteManager is an independently developed security-systems engineering and operations platform for map-first planning, validation, private-network and offline-capable workflows, device operations, and evidence-ready handoff." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://insitemanager.com/" />
@@ -43,11 +44,11 @@
 
       <a class="header-cta" href="#progress">Active development</a>
 
-      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-navigation" data-menu-button>
         <span></span><span></span><span></span>
       </button>
     </div>
-    <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" data-mobile-nav>
       <a href="#platform">Platform</a>
       <a href="#workflows">Workflows</a>
       <a href="#progress">Progress</a>
@@ -63,6 +64,7 @@
           <div class="eyebrow"><span class="status-dot"></span> Independent project · Active development</div>
           <h1>Plan systems.<br /><span>Validate deployments.</span><br />Operate with context.</h1>
           <p class="hero-lede">InsiteManager brings security-system design, deployment engineering, device operations, verification, and evidence-ready handoff into one connected workspace.</p>
+          <p class="hero-audience">Built for security integrators, field technicians, system engineers, and operations teams.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#platform">Explore the platform</a>
             <a class="button button-secondary" href="#progress">View development progress</a>
@@ -118,35 +120,35 @@
             <span class="module-index">02</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/></svg></div>
             <h3>VMS</h3>
-            <p>Live-workspace readiness, playback and event verification, source configuration, and route-to-route review posture.</p>
+            <p>Live and playback readiness, event verification, source configuration, and project-aware review.</p>
             <span class="module-status active">Active development</span>
           </article>
           <article class="module-card reveal delay-2">
             <span class="module-index">03</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="2"/><rect x="4" y="14" width="16" height="7" rx="2"/><path d="M8 6.5h.01M8 17.5h.01"/></svg></div>
             <h3>Devices</h3>
-            <p>Roster, enrollment readiness, telemetry state, gateway-aware device follow-through, and operational handoff.</p>
+            <p>Device roster, enrollment readiness, telemetry, gateway status, and clear next actions.</p>
             <span class="module-status active">Active development</span>
           </article>
           <article class="module-card reveal">
             <span class="module-index">04</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18v-5M9 18V8M14 18v-3M19 18V5"/><path d="M3 21h18"/></svg></div>
             <h3>Admin / Ops</h3>
-            <p>Queue triage, incident and escalation posture, activity review, gateway status, and blocked-work visibility.</p>
+            <p>Queue triage, incidents, escalations, activity review, gateway status, and blocked-work visibility.</p>
             <span class="module-status active">Active development</span>
           </article>
           <article class="module-card reveal delay-1">
             <span class="module-index">05</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6Z"/><path d="M15 3v5h5M9 12h7M9 16h7"/></svg></div>
             <h3>Reports</h3>
-            <p>Deployment sheets, review packages, manifests, evidence bundles, delivery routing, and project handoff artifacts.</p>
+            <p>Deployment sheets, review packages, evidence bundles, delivery records, and project handoff.</p>
             <span class="module-status active">Active development</span>
           </article>
           <article class="module-card reveal delay-2">
             <span class="module-index">06</span>
             <div class="module-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 8 5-8 5-8-5Z"/><path d="m4 12 8 5 8-5M4 16l8 5 8-5"/></svg></div>
             <h3>Visualization</h3>
-            <p>Site-health, operational overlays, track context, telemetry posture, and incident-oriented review surfaces.</p>
+            <p>Site health, operational overlays, track context, telemetry, and incident review.</p>
             <span class="module-status exploratory">Expanding</span>
           </article>
         </div>
@@ -369,7 +371,7 @@
   <dialog class="lightbox" data-lightbox-dialog aria-label="Screenshot viewer">
     <button class="lightbox-close" type="button" aria-label="Close screenshot viewer" data-lightbox-close>×</button>
     <div class="lightbox-frame">
-      <img src="" alt="" data-lightbox-image />
+      <img alt="" data-lightbox-image />
     </div>
     <p data-lightbox-caption></p>
   </dialog>

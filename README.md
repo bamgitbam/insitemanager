@@ -1,99 +1,58 @@
-# InsiteManager.com — Website v1
+# InsiteManager Website
 
-Standalone static showcase site for **InsiteManager**. This repository is intentionally separate from the application repository and contains only public-facing website assets.
+Public showcase site for [InsiteManager](https://insitemanager.com/), an independently developed security-systems engineering and operations platform.
 
-## What is included
+This repository intentionally contains only the files served by the public website. The InsiteManager application, development records, deployment configuration, credentials, and private project data are maintained separately.
 
-- Responsive one-page product / engineering portfolio
-- Current InsiteManager screenshots, optimized to WebP
+## Website contents
+
+- Responsive, one-page platform overview
+- Product screenshots optimized for the web
 - Screenshot lightbox
 - Platform, workflow, progress, and engineering sections
-- Open Graph / social preview image
-- Favicon + Apple touch icon
-- `robots.txt` + `sitemap.xml`
-- `CNAME` for `insitemanager.com`
-- `.nojekyll` for GitHub Pages
+- Social preview, favicon, and touch icon assets
+- Search-engine discovery files
 - No framework, package manager, tracking script, third-party font, or runtime dependency
 
 ## Local preview
 
-From the repository root:
+From the repository root, start any static file server. For example:
 
 ```powershell
 python -m http.server 8080
 ```
 
-Then open:
+Then open `http://localhost:8080`.
+
+## Project structure
 
 ```text
-http://localhost:8080
+index.html          Public page content and metadata
+assets/site.css     Visual system and responsive layouts
+assets/site.js      Navigation, reveal behavior, and screenshot viewer
+assets/images/      Optimized demonstration screenshots and social preview
+assets/icons/       InsiteManager marks
+robots.txt          Search-crawler policy
+sitemap.xml         Public URL index
+CNAME               Custom-domain declaration
 ```
 
-## Recommended GitHub repository
+No build step is required. Publish the repository root through a static host with HTTPS enabled.
 
-Create a dedicated repository such as:
+## Public repository boundary
 
-```text
-insitemanager-site
-```
+Before publishing changes, confirm that the repository contains only material intended for unrestricted public access.
 
-Do **not** merge this public website into the InsiteManager application repository.
+Do not commit:
 
-Copy the contents of this package to the repository root, commit, and push to `main`.
+- Credentials, tokens, `.env` files, or authorization headers
+- Personal contact details or account-specific hosting instructions
+- Private DNS records, network addresses, device identifiers, or customer information
+- Application source, internal development notes, captured logs, or diagnostic bundles
+- Unsanitized project exports or screenshots containing private operational data
 
-## Enable GitHub Pages
+The included screenshots use demonstration workflows. New screenshots should be reviewed at full resolution before they replace an existing asset.
 
-1. Open the repository on GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Choose branch **main** and folder **/(root)**.
-5. Save.
-6. Under **Custom domain**, enter `insitemanager.com`.
-7. Leave the included `CNAME` file in the repository root.
+## Development status
 
-## GoDaddy DNS
-
-For the apex domain (`insitemanager.com`), GitHub currently documents these A records:
-
-| Type | Name | Value |
-|---|---|---|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-
-For `www`, point the CNAME at the GitHub Pages account host. If this site is published under the current `bamgitbam` GitHub account:
-
-| Type | Name | Value |
-|---|---|---|
-| CNAME | www | bamgitbam.github.io |
-
-Remove conflicting apex A/AAAA/ALIAS/ANAME records or conflicting `www` CNAME records before expecting GitHub's HTTPS certificate to issue.
-
-After DNS resolves, return to **GitHub → Settings → Pages** and enable **Enforce HTTPS** when available.
-
-### Strongly recommended domain-security step
-
-GitHub recommends verifying the custom domain at the account level with the TXT record it provides under **GitHub account Settings → Pages**. Keep that TXT record after verification to help prevent domain takeover.
-
-## Before changing DNS
-
-Keep the current live domain untouched until this site has been reviewed from its temporary GitHub Pages URL. DNS should be the final controlled change.
-
-## Editing content
-
-The site is intentionally simple:
-
-```text
-index.html          page content / metadata
-assets/site.css     complete visual system + responsive layout
-assets/site.js      mobile menu, reveal behavior, screenshot lightbox
-assets/images/      optimized screenshots + social preview
-assets/icons/       InsiteManager brand marks
-```
-
-No build step is required.
-
-- Pre-publish polish: tightened desktop spacing and clarified security-focused, private-network-capable, and offline-resilient positioning without making unsupported encryption claims.
-
-- Responsive hero pass: preserved desktop, retained the two-column product view through 901–1040 px, tightened short landscape layouts, reduced phone headline/spacing, and moved security/private-network/offline proof points after the product screenshot on stacked layouts.
+InsiteManager is an independent project in active development. The website describes current working surfaces and intended direction without claiming commercial availability. Features, integrations, and deployment architecture may evolve.

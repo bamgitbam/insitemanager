@@ -6,6 +6,7 @@
   const dialogImage = document.querySelector('[data-lightbox-image]');
   const dialogCaption = document.querySelector('[data-lightbox-caption]');
   const dialogClose = document.querySelector('[data-lightbox-close]');
+  let dialogTrigger = null;
 
   const syncHeader = () => header?.classList.toggle('scrolled', window.scrollY > 16);
   syncHeader();
@@ -29,6 +30,7 @@
   document.querySelectorAll('[data-lightbox]').forEach((button) => {
     button.addEventListener('click', () => {
       if (!dialog || !dialogImage) return;
+      dialogTrigger = button;
       dialogImage.src = button.dataset.lightbox || '';
       const embeddedImage = button.querySelector('img');
       dialogImage.alt = embeddedImage?.alt || 'InsiteManager screenshot';
@@ -40,11 +42,15 @@
   const closeDialog = () => {
     if (!dialog?.open) return;
     dialog.close();
-    if (dialogImage) dialogImage.src = '';
   };
   dialogClose?.addEventListener('click', closeDialog);
   dialog?.addEventListener('click', (event) => {
     if (event.target === dialog) closeDialog();
+  });
+  dialog?.addEventListener('close', () => {
+    dialogImage?.removeAttribute('src');
+    dialogTrigger?.focus();
+    dialogTrigger = null;
   });
 
   const revealNodes = document.querySelectorAll('.reveal');
