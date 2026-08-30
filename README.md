@@ -95,4 +95,5 @@ assets/icons/       InsiteManager brand marks
 No build step is required.
 
 - Pre-publish polish: tightened desktop spacing and clarified security-focused, private-network-capable, and offline-resilient positioning without making unsupported encryption claims.
-# insitemanager
+
+- Responsive hero pass: preserved desktop, retained the two-column product view through 901–1040 px, tightened short landscape layouts, reduced phone headline/spacing, and moved security/private-network/offline proof points after the product screenshot on stacked layouts.
