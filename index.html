@@ -444,11 +444,13 @@
   </footer>
 
   <dialog class="lightbox" data-lightbox-dialog aria-label="Screenshot viewer">
-    <button class="lightbox-close" type="button" aria-label="Close screenshot viewer" data-lightbox-close>×</button>
-    <div class="lightbox-frame">
-      <img alt="" data-lightbox-image />
+    <div class="lightbox-content">
+      <div class="lightbox-frame">
+        <img alt="" data-lightbox-image />
+        <button class="lightbox-close" type="button" aria-label="Close screenshot viewer" data-lightbox-close>×</button>
+      </div>
+      <p data-lightbox-caption></p>
     </div>
-    <p data-lightbox-caption></p>
   </dialog>
 
   <script src="assets/site.js" defer></script>
