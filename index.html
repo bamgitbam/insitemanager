@@ -38,6 +38,7 @@
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#platform">Platform</a>
         <a href="#workflows">Workflows</a>
+        <a href="#projects">Projects</a>
         <a href="#progress">Progress</a>
         <a href="#engineering">Engineering</a>
       </nav>
@@ -51,6 +52,7 @@
     <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" data-mobile-nav>
       <a href="#platform">Platform</a>
       <a href="#workflows">Workflows</a>
+      <a href="#projects">Projects</a>
       <a href="#progress">Progress</a>
       <a href="#engineering">Engineering</a>
     </nav>
@@ -61,7 +63,7 @@
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="shell hero-layout">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="status-dot"></span> Independent project · Active development</div>
+          <div class="eyebrow"><span class="status-dot"></span> Flagship project · Active development</div>
           <h1>Plan systems.<br /><span>Validate deployments.</span><br />Operate with context.</h1>
           <p class="hero-lede">InsiteManager brings security-system design, deployment engineering, device operations, verification, and evidence-ready handoff into one connected workspace.</p>
           <p class="hero-audience">Built for security integrators, field technicians, system engineers, and operations teams.</p>
@@ -187,19 +189,27 @@
           <div class="feature-copy">
             <span class="feature-number">02 / VERIFY</span>
             <h3>Verification that follows the project.</h3>
-            <p>VMS workflows connect project imports, source readiness, event verification, evidence state, and follow-up paths without losing the deployment context that produced them.</p>
+            <p>VMS workflows now expose source truth, route readiness, runtime blocks, device state, and handoff guidance without losing the project context that produced them.</p>
             <ul class="feature-list">
-              <li>Project-aware verification</li>
+              <li>Source and route truth</li>
               <li>Live / playback readiness</li>
-              <li>Event and evidence posture</li>
-              <li>Cross-module handoff</li>
+              <li>Blocked-state guidance</li>
+              <li>Responsive field handoff</li>
             </ul>
           </div>
-          <div class="screenshot-card">
-            <button class="image-button" type="button" data-lightbox="assets/images/vms-verification.webp" data-caption="VMS — project-aware event and verification workflow.">
-              <img src="assets/images/vms-verification.webp" alt="InsiteManager VMS verification screen with event verification workflow and project context" width="1800" height="862" loading="lazy" />
-              <span class="zoom-label">View full screen</span>
-            </button>
+          <div class="responsive-proof">
+            <div class="screenshot-card responsive-proof-main">
+              <button class="image-button" type="button" data-lightbox="assets/images/vms-live-q1.webp" data-caption="VMS Q1 — live readiness, source truth, route state, blocked conditions, and explicit field handoff in one operational view.">
+                <img src="assets/images/vms-live-q1.webp" alt="InsiteManager VMS live readiness view showing source truth, route status, blocked conditions, devices, and field handoff state" width="1440" height="1000" loading="lazy" />
+                <span class="zoom-label">View full screen</span>
+              </button>
+            </div>
+            <div class="screenshot-card responsive-proof-phone">
+              <button class="image-button" type="button" data-lightbox="assets/images/vms-live-phone-q1.webp" data-caption="The same VMS live-readiness workflow adapted for a phone operational surface.">
+                <img src="assets/images/vms-live-phone-q1.webp" alt="InsiteManager VMS live readiness workflow on a phone layout" width="412" height="915" loading="lazy" />
+              </button>
+              <span class="surface-label">Phone surface</span>
+            </div>
           </div>
         </div>
 
@@ -257,12 +267,77 @@
       </div>
     </section>
 
+
+    <section class="section projects-section" id="projects">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div class="kicker">Other active products</div>
+          <h2>Independent products. Shared engineering discipline.</h2>
+          <p>Insite Manager remains the flagship. Alongside it, separate products explore local-first interaction, field video, diagnostics, hardware integration, and specialized real-world workflows. Each is intended to stand on its own.</p>
+        </div>
+
+        <article class="project-feature project-feature-ronin reveal">
+          <div class="project-copy">
+            <div class="project-meta"><span>Independent product</span><strong>Active development</strong></div>
+            <h3>Ronin Range</h3>
+            <p class="project-tagline">Local-first shooting, games, scoring, and range workflows.</p>
+            <p>A real-world shooting platform built around play, target sessions, equipment, zeroing, statistics, and social use. Its value is intentionally easy to understand without requiring the broader ecosystem.</p>
+            <div class="project-chips"><span>Play + games</span><span>Zero + loadout</span><span>Desktop + mobile</span><span>Local-first</span></div>
+          </div>
+          <div class="project-visual project-visual-ronin">
+            <div class="project-screen project-screen-wide">
+              <button class="image-button" type="button" data-lightbox="assets/images/ronin-range-home.webp" data-caption="Ronin Range — home surface with Play, Games, Create, Loadout, and Zero Check as first-class workflows.">
+                <img src="assets/images/ronin-range-home.webp" alt="Ronin Range home screen showing Play, Games, Create, Loadout, and Zero Check" width="1440" height="900" loading="lazy" />
+              </button>
+            </div>
+            <div class="project-screen project-screen-phone">
+              <button class="image-button" type="button" data-lightbox="assets/images/ronin-range-game-phone.webp" data-caption="Ronin Range — phone game runtime designed for use at the range.">
+                <img src="assets/images/ronin-range-game-phone.webp" alt="Ronin Range phone game runtime with target scoring and player controls" width="390" height="844" loading="lazy" />
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-grid-secondary">
+          <article class="project-card reveal">
+            <div class="project-card-copy">
+              <div class="project-meta"><span>Independent product</span><strong>Active development</strong></div>
+              <h3>Sawyer</h3>
+              <p class="project-tagline">Field camera observation and capture.</p>
+              <p>A developing field-oriented utility for live observation, snapshots, recording, media handling, system health, and local operation.</p>
+            </div>
+            <div class="project-screen">
+              <button class="image-button" type="button" data-lightbox="assets/images/sawyer-capture.webp" data-caption="Sawyer — capture workflow with live preview, snapshot, recording, media, system, and logs surfaces.">
+                <img src="assets/images/sawyer-capture.webp" alt="Sawyer capture screen with live preview, Snapshot and Record controls, and navigation for Live, Media, System, and Logs" width="1440" height="900" loading="lazy" />
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1">
+            <div class="project-card-copy">
+              <div class="project-meta"><span>Independent product</span><strong>Active development</strong></div>
+              <h3>Insite Tools</h3>
+              <p class="project-tagline">Diagnostics, inspection, and recovery.</p>
+              <p>Engineering utilities for API inspection, logs, validation, troubleshooting, testing, and controlled recovery workflows.</p>
+            </div>
+            <div class="project-screen">
+              <button class="image-button" type="button" data-lightbox="assets/images/insite-tools-dashboard.webp" data-caption="Insite Tools — development and diagnostics dashboard with API and log tooling.">
+                <img src="assets/images/insite-tools-dashboard.webp" alt="Insite Tools development and diagnostics dashboard showing API and Logs utilities" width="1440" height="1000" loading="lazy" />
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note reveal">The products can share capabilities where useful, but public identity stays focused: understand the product first, then the connections if they matter.</p>
+      </div>
+    </section>
+
     <section class="section progress-section" id="progress">
       <div class="shell progress-layout">
         <div class="section-heading sticky-heading reveal">
           <div class="kicker">Development progress</div>
-          <h2>Substantial working surface. Deliberate path forward.</h2>
-          <p>The project is intentionally presented as active development. The goal is operational depth and dependable workflows — not a premature claim of commercial availability.</p>
+          <h2>Working platform. Expanding operational depth.</h2>
+          <p>Insite Manager remains in active development. Designer provides the established planning foundation while VMS, device operations, reporting, responsive field workflows, local/private-network operation, and deployment validation continue to deepen.</p>
         </div>
 
         <div class="progress-list">
@@ -277,17 +352,17 @@
           <article class="progress-card reveal">
             <div class="progress-marker active">02</div>
             <div>
-              <div class="progress-meta"><span>Integration</span><strong>Active</strong></div>
+              <div class="progress-meta"><span>Operational workflows</span><strong>Active</strong></div>
               <h3>VMS, devices, operations, and reports</h3>
-              <p>Connected module workflows are being refined around readiness, verification, telemetry, incidents, evidence, and handoff.</p>
+              <p>Connected workflows now cover deeper readiness, source truth, verification, telemetry, incidents, blocked states, evidence, and handoff while integration continues to mature.</p>
             </div>
           </article>
           <article class="progress-card reveal">
             <div class="progress-marker active">03</div>
             <div>
-              <div class="progress-meta"><span>Resilience</span><strong>Active</strong></div>
-              <h3>Offline, local, and private-network operation</h3>
-              <p>Core workflows are designed for local and private networks, including edge/field companion patterns, degraded-connectivity behavior, and controlled recovery without requiring a public-cloud path.</p>
+              <div class="progress-meta"><span>Field + resilience</span><strong>Active</strong></div>
+              <h3>Responsive, local, and private-network operation</h3>
+              <p>Desktop, tablet, and phone surfaces are being validated alongside local/private-network behavior, degraded-connectivity handling, and controlled recovery without requiring a public-cloud path.</p>
             </div>
           </article>
           <article class="progress-card reveal">
@@ -350,7 +425,7 @@
         <div>
           <div class="kicker">InsiteManager</div>
           <h2>Security-system engineering from design through operations.</h2>
-          <p>Independent software project. Active development.</p>
+          <p>Flagship software project. Active development. Independent products continue alongside it.</p>
         </div>
         <a class="button button-primary" href="#top">Back to overview</a>
       </div>
