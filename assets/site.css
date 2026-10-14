@@ -551,14 +551,6 @@ button { color: inherit; }
 }
 .project-card-copy { max-width: 590px; }
 .project-card .project-screen { align-self: end; }
-.projects-note {
-  max-width: 790px;
-  margin: 28px auto 0;
-  color: #7a8798;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.65;
-}
 
 @media (max-width: 1040px) {
   .responsive-proof { min-height: 460px; }
