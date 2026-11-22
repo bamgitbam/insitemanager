@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://insitemanager.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://insitemanager.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://insitemanager.com/products/insite-manager.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://insitemanager.com/products/insite-tools.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://insitemanager.com/products/sawyer.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://insitemanager.com/products/ronin-range.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://insitemanager.com/privacy-security.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://insitemanager.com/gallery.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://insitemanager.com/progress.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
