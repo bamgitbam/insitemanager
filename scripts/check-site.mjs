@@ -163,7 +163,7 @@ for (const name of progressJumps) {
   if (!progress.includes(`href="#progress-${name}"`)) fail('progress.html', `missing milestone jump link: ${name}`);
 }
 const milestoneItemCount = (htmlByPage['progress.html'].match(/class="progress-line"/g) || []).length;
-if (milestoneItemCount !== 22) fail('progress.html', `expected 22 published milestones, found ${milestoneItemCount}`);
+if (milestoneItemCount !== 24) fail('progress.html', `expected 24 capability-scoped milestones, found ${milestoneItemCount}`);
 
 // The published feature-state contract is capability-scoped. Catch accidental label changes or omissions.
 const stageNames = {
@@ -181,9 +181,9 @@ for (const [className, label] of Object.entries(stageNames)) {
 }
 const acceptedMilestoneCounts = {
   'insite-manager': 5,
-  'insite-tools': 5,
+  'insite-tools': 6,
   'sawyer': 6,
-  'ronin-range': 6,
+  'ronin-range': 7,
 };
 for (const [name, expected] of Object.entries(acceptedMilestoneCounts)) {
   const section = progress.match(new RegExp(`<section class="cross-progress-card"[^>]*id="progress-${name}"[\\s\\S]*?<\\/section>`))?.[0];
@@ -198,7 +198,10 @@ for (const [name, expected] of Object.entries(acceptedMilestoneCounts)) {
 // Captions are part of the evidence boundary: browser captures are not device/field acceptance.
 const galleryFigures = htmlByPage['gallery.html'].match(/<figure\b[\s\S]*?<\/figure>/g) || [];
 const provenance = [
-  ['e2e-tools-api-workbench.webp', 'Browser E2E view'],
+  ['e2e-tools-devices-overview.webp', 'Synthetic browser E2E fixture'],
+  ['e2e-tools-network-services.webp', 'Synthetic browser E2E fixture'],
+  ['e2e-tools-api-workbench.webp', 'Isolated browser E2E view'],
+  ['e2e-tools-logs-empty.webp', 'Isolated browser E2E view'],
   ['e2e-ronin-games-picker.webp', 'Browser E2E view'],
   ['e2e-ronin-battleship-round.webp', 'Browser E2E view'],
   ['sawyer-capture.webp', 'Earlier simulated interface'],
@@ -234,6 +237,27 @@ for (const [name, [shotId, imageName, milestoneId, milestoneName, stageClass]] o
 }
 if (!htmlByPage['products/sawyer.html'].includes('public image is an earlier simulated interface')) fail('products/sawyer.html', 'missing Sawyer screenshot limitation in field example');
 if (!htmlByPage['products/ronin-range.html'].includes('not a measurement of physical target accuracy')) fail('products/ronin-range.html', 'missing Ronin physical-acceptance limitation');
+
+// Pass 184: Do not collapse physical A50 interface proof into native functional qualification,
+// or local Ronin A50 Cromite acceptance into a public-hosted PWA release.
+const scopedStates = [
+  ['milestone-tools-a50-interface', 'Galaxy A50 native APK and interface', 'stage-verified'],
+  ['milestone-tools-a50-qualification', 'Galaxy A50 functional and security qualification', 'stage-staged'],
+  ['milestone-ronin-local-a50-pwa', 'Local A50 Cromite offline PWA', 'stage-verified'],
+];
+for (const [id, label, status] of scopedStates) {
+  const el = progress.match(new RegExp(`<li id="${id}"><div class="progress-line"><strong>([^<]+)</strong><span class="stage ([^"]+)">`));
+  if (!el || el[1] !== label || el[2] !== status) fail('progress.html', `missing or misclassified accepted scope: ${id}`);
+}
+for (const claim of ['Native network checks', 'saved evidence export bytes', 'WebView/security posture', 'public-hosted launch']) {
+  if (!progress.includes(claim)) fail('progress.html', `missing open qualification boundary: ${claim}`);
+}
+if (!htmlByPage['privacy-security.html'].includes('None requires another suite product')) fail('privacy-security.html', 'missing independent-product contract');
+if (!htmlByPage['privacy-security.html'].includes('collection, processing, local storage, import/export')) fail('privacy-security.html', 'missing sensitive data lifecycle principle');
+if (!htmlByPage['products/insite-tools.html'].includes('neither certifies a site')) fail('products/insite-tools.html', 'missing service-comparison limit');
+const toolsGallery = htmlByPage['gallery.html'].match(/<section class="section visual-showcase visual-showcase-alt" id="tools"[\s\S]*?<\/section>/)?.[0] || '';
+if ((toolsGallery.match(/<figure\b/g) || []).length !== 4) fail('gallery.html', 'expected four curated Tools example views');
+if (!toolsGallery.includes('No real target scanned') || !toolsGallery.includes('no log analysis or native export proven')) fail('gallery.html', 'missing Tools gallery synthetic/empty-scope qualification');
 
 const sitemap = text(join(root, 'sitemap.xml'));
 for (const page of pages) {

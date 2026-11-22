@@ -105,16 +105,34 @@
         <div>
           <div class="kicker">Insite Tools</div>
           <h2 id="gallery-tools-heading">Understand the device before changing it.</h2>
-          <p>Device discovery, network checks, APIs and logs are part of the workstation workflow. This browser capture shows API endpoint selection and the Changes Locked boundary before a request is sent.</p>
+          <p>Devices, Network, API and Logs are shown with isolated browser-test fixtures. The synthetic target is not a real device scan; empty API and Logs views are not evidence that a request was sent or a file exported.</p>
         </div>
         <a class="text-link" href="products/insite-tools.html">Explore Insite Tools <span aria-hidden="true">→</span></a>
       </div>
-      <div class="visual-showcase-grid visual-showcase-grid-single">
+      <div class="visual-showcase-grid visual-showcase-grid-two">
+      <figure id="shot-tools-devices-overview" class="visual-shot">
+        <a class="image-button" data-lightbox="assets/images/e2e-tools-devices-overview.webp" data-caption="Devices overview — Synthetic browser E2E fixture with uncollected evidence; no physical device inspected." aria-label="Enlarge: Devices overview test fixture" href="assets/images/e2e-tools-devices-overview.webp">
+          <span class="visual-shot-frame"><img src="assets/images/e2e-tools-devices-overview.webp" alt="Synthetic Insite Tools Devices screen showing a fixture camera and uncollected qualification evidence" width="1440" height="1000" loading="lazy" decoding="async" /><span class="zoom-label">View screenshot</span></span>
+        </a>
+        <figcaption><span class="visual-shot-kind">Synthetic browser E2E fixture</span><strong>Devices overview</strong><p>Saved target context and uncollected observations. No real device inspected.</p></figcaption>
+      </figure>
+      <figure id="shot-tools-network-services" class="visual-shot">
+        <a class="image-button" data-lightbox="assets/images/e2e-tools-network-services.webp" data-caption="Network services — Synthetic browser E2E fixture; no real target scanned or qualification completed." aria-label="Enlarge: Network services test fixture" href="assets/images/e2e-tools-network-services.webp">
+          <span class="visual-shot-frame"><img src="assets/images/e2e-tools-network-services.webp" alt="Synthetic Insite Tools Network screen with NTP and TCP check controls, and no check results" width="1440" height="1000" loading="lazy" decoding="async" /><span class="zoom-label">View screenshot</span></span>
+        </a>
+        <figcaption><span class="visual-shot-kind">Synthetic browser E2E fixture</span><strong>Network service checks</strong><p>Explicit check controls and empty results. No real target scanned.</p></figcaption>
+      </figure>
       <figure id="shot-tools-api-workbench" class="visual-shot">
         <a class="image-button" data-lightbox="assets/images/e2e-tools-api-workbench.webp" data-caption="API endpoint workbench — Endpoint selection and the Changes Locked boundary, before a request has been sent." aria-label="Enlarge: API endpoint workbench" href="assets/images/e2e-tools-api-workbench.webp">
           <span class="visual-shot-frame"><img src="assets/images/e2e-tools-api-workbench.webp" alt="Insite Tools browser test showing categories and API endpoints, an empty response area, and Changes Locked status" width="1440" height="1000" loading="lazy" decoding="async" /><span class="zoom-label">View screenshot</span></span>
         </a>
-        <figcaption><span class="visual-shot-kind">Browser E2E view</span><strong>API endpoint workbench</strong><p>Endpoint selection and the Changes Locked boundary, before a request has been sent.</p></figcaption>
+        <figcaption><span class="visual-shot-kind">Isolated browser E2E view</span><strong>API endpoint workbench</strong><p>Endpoint selection and the Changes Locked boundary, before a request has been sent.</p></figcaption>
+      </figure>
+      <figure id="shot-tools-logs-empty" class="visual-shot">
+        <a class="image-button" data-lightbox="assets/images/e2e-tools-logs-empty.webp" data-caption="Logs workspace — Isolated browser E2E view with no logs imported; not a native file-export acceptance test." aria-label="Enlarge: Empty Logs workspace" href="assets/images/e2e-tools-logs-empty.webp">
+          <span class="visual-shot-frame"><img src="assets/images/e2e-tools-logs-empty.webp" alt="Insite Tools Logs browser test showing import controls and an empty zero-entry results view" width="1440" height="1000" loading="lazy" decoding="async" /><span class="zoom-label">View screenshot</span></span>
+        </a>
+        <figcaption><span class="visual-shot-kind">Isolated browser E2E view</span><strong>Logs import and filtering</strong><p>Empty log workspace and local import controls; no log analysis or native export proven.</p></figcaption>
       </figure>
       </div>
     </div>

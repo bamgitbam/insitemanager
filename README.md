@@ -63,7 +63,7 @@ Do not commit:
 - Application source, internal development notes, captured logs, or diagnostic bundles
 - Unsanitized project exports or screenshots containing private operational data
 
-The included screenshots use demonstration workflows. New screenshots should be reviewed at full resolution before they replace an existing asset. Screenshot labels must distinguish application views, browser E2E captures and simulated previews. A social-sharing preview cannot carry the qualifying caption from a page: use neutral site artwork for a simulated or unaccepted capability until a representative, approved capture is available. The site check guards these public-claim boundaries and the existing 22 milestone stages; changing accepted milestones requires an intentional review of its validation contract.
+The included screenshots use demonstration workflows. New screenshots should be reviewed at full resolution before they replace an existing asset. Screenshot labels must distinguish application views, browser E2E captures and simulated previews. A social-sharing preview cannot carry the qualifying caption from a page: use neutral site artwork for a simulated or unaccepted capability until a representative, approved capture is available. The site check guards these public-claim boundaries and the currently reviewed 24 capability-scoped milestone stages; changing accepted milestones requires an intentional review of its validation contract.
 
 ## Release candidate / push-readiness gate
 
@@ -132,3 +132,17 @@ In the Ronin Range catalog, linked selection names jump to the matching featured
 ### Representative examples and qualification links (Pass 182)
 
 Each product's concise *Example in practice* connects a real task to one explicitly labeled gallery capture and the corresponding, capability-scoped Progress milestone. These links go to individual items rather than a broad product section; a targeted item receives a visible highlight and avoids the sticky header. Keep screenshot provenance accurate: Sawyer's published image is an earlier simulated interface, not a frame from the verified S21 stream. Ronin browser E2E captures are not proof of physical target accuracy. Update all related links and the `scripts/check-site.mjs` mapping together when an approved public example changes.
+
+### Product accuracy reconciliation and Tools gallery (Pass 184)
+
+The Insite Tools Galaxy A50 **APK installation and native workspace visual review** are a narrow Verified milestone; native diagnostics, live-device access, SAF saved export bytes/redaction/cancellation, offline restart/persistence and WebView/security posture remain independently staged. Ronin Range has a separate **local A50 Cromite offline PWA** Verified milestone; the public-hosted PWA release stays Staged. Do not merge these test scopes. The independent local/offline core ownership of all four applications is architectural direction and documented experience, not an assertion that every optional camera, map or API integration runs disconnected.
+
+Three new Tools images are optimized locally from the 2026-11-21 accuracy handoff's browser-E2E reference assets, without use of physical Galaxy A50 screenshots:
+
+| Published asset | Original handoff image | Scope |
+| --- | --- | --- |
+| `assets/images/e2e-tools-devices-overview.webp` | `reference-media/tools-devices-overview-desktop-browser-e2e.png` | Synthetic fixture target, no real inspection |
+| `assets/images/e2e-tools-network-services.webp` | `reference-media/tools-network-services-desktop-browser-e2e.png` | Synthetic fixture, no live check |
+| `assets/images/e2e-tools-logs-empty.webp` | `reference-media/tools-logs-desktop-browser-e2e.png` | Empty isolated Logs UI, no real import or export proved |
+
+The previously published `e2e-tools-api-workbench.webp` remains the API example. Fixture IP `192.168.1.101` is synthetic screenshot data, not a published real inventory. New images were inspected before inclusion and re-encoded as WebP without EXIF. The gallery captions must keep synthetic/browser examples separate from A50 physical acceptance, device scanning and download-byte validation. Stage changes and public media must be reviewed by the operator before commit or deployment.
