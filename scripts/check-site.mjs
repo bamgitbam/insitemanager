@@ -163,7 +163,7 @@ for (const name of progressJumps) {
   if (!progress.includes(`href="#progress-${name}"`)) fail('progress.html', `missing milestone jump link: ${name}`);
 }
 const milestoneItemCount = (htmlByPage['progress.html'].match(/class="progress-line"/g) || []).length;
-if (milestoneItemCount !== 24) fail('progress.html', `expected 24 capability-scoped milestones, found ${milestoneItemCount}`);
+if (milestoneItemCount !== 26) fail('progress.html', `expected 26 capability-scoped milestones, found ${milestoneItemCount}`);
 
 // The published feature-state contract is capability-scoped. Catch accidental label changes or omissions.
 const stageNames = {
@@ -182,7 +182,7 @@ for (const [className, label] of Object.entries(stageNames)) {
 const acceptedMilestoneCounts = {
   'insite-manager': 5,
   'insite-tools': 6,
-  'sawyer': 6,
+  'sawyer': 8,
   'ronin-range': 7,
 };
 for (const [name, expected] of Object.entries(acceptedMilestoneCounts)) {
@@ -241,6 +241,8 @@ if (!htmlByPage['products/ronin-range.html'].includes('not a measurement of phys
 // Pass 184: Do not collapse physical A50 interface proof into native functional qualification,
 // or local Ronin A50 Cromite acceptance into a public-hosted PWA release.
 const scopedStates = [
+  ['milestone-sawyer-mobile-ui', 'Devices-first Android Live interface', 'stage-verified'],
+  ['milestone-sawyer-android-build', 'Windows Android build workflow', 'stage-verified'],
   ['milestone-tools-a50-interface', 'Galaxy A50 native APK and interface', 'stage-verified'],
   ['milestone-tools-a50-qualification', 'Galaxy A50 functional and security qualification', 'stage-staged'],
   ['milestone-ronin-local-a50-pwa', 'Local A50 Cromite offline PWA', 'stage-verified'],
